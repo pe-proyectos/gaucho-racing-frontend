@@ -1,7 +1,7 @@
 {
   "name": "gaucho-racing-frontend",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "node": ">=22.12.0"
   },
@@ -10,7 +10,8 @@
     "build": "astro build",
     "preview": "astro preview --host 0.0.0.0 --port 4321",
     "start": "astro preview --host 0.0.0.0 --port 4321",
-    "astro": "astro"
+    "astro": "astro",
+    "prebuild": "rm -rf node_modules/.cache"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
