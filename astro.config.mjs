@@ -8,7 +8,7 @@ export default defineConfig({
     plugins: [tailwindcss()],
     cacheDir: false,
     preview: {
-      allowedHosts: 'all',
+      allowedHosts: ['gaucho.luminari.agency', '.luminari.agency', 'localhost', '127.0.0.1'],
     },
   },
 });
