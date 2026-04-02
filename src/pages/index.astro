@@ -1,0 +1,439 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+---
+
+<Layout>
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div style="max-width: 1280px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;">
+      <a href="#" style="font-family: 'Bebas Neue', cursive; font-size: 1.5rem; letter-spacing: 0.08em; color: #fff; text-decoration: none; line-height: 1;">
+        GAUCHO RACING
+      </a>
+      <div id="nav-links" style="display: flex; gap: 2.5rem; align-items: center;">
+        <a href="#historia" style="font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s;">Historia</a>
+        <a href="#equipo" style="font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s;">Equipo</a>
+        <a href="#galeria" style="font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s;">Galería</a>
+        <a href="#sponsors" style="font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s;">Sponsors</a>
+        <a href="#contacto" style="font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s;">Contacto</a>
+      </div>
+      <!-- Mobile hamburger -->
+      <button id="menu-btn" style="display: none; background: none; border: none; cursor: pointer; padding: 0.5rem;" aria-label="Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" style="height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; padding: 0 2rem;">
+    <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(200,16,46,0.06) 0%, transparent 70%); pointer-events: none;"></div>
+    
+    <div style="max-width: 1280px; width: 100%; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+      <!-- Text content -->
+      <div>
+        <p class="fade-up" style="font-size: 0.7rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: #C8102E; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem;">
+          <span style="display: block; width: 2rem; height: 2px; background: #C8102E;"></span>
+          ISLE OF MAN TT 2025
+        </p>
+        <h1 class="fade-up stagger-1" style="font-family: 'Bebas Neue', cursive; font-size: clamp(4rem, 10vw, 7.5rem); line-height: 0.92; letter-spacing: 0.03em; color: #fff; margin-bottom: 1.5rem;">
+          GAUCHO<br>RACING
+        </h1>
+        <p class="fade-up stagger-2" style="font-size: 1rem; font-weight: 300; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 2.5rem;">
+          Velocidad. Precisión. Pasión.
+        </p>
+        <a href="#equipo" class="fade-up stagger-3" style="display: inline-block; padding: 0.875rem 2rem; border: 1px solid rgba(255,255,255,0.7); color: #fff; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; transition: all 0.3s ease; background: transparent;">
+          CONOCE AL EQUIPO
+        </a>
+      </div>
+
+      <!-- Hero image placeholder -->
+      <div class="fade-up stagger-2" style="width: 100%;">
+        <div class="placeholder-box" style="width: 100%; aspect-ratio: 16/9; border-radius: 2px;">
+          [ FOTO PRINCIPAL ]
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator" style="position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+      <span style="font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.3);">Scroll</span>
+      <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
+        <rect x="1" y="1" width="14" height="22" rx="7" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+        <circle cx="8" cy="8" r="2.5" fill="#C8102E"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- HISTORIA -->
+  <section id="historia" style="background-color: #0a0a0a; padding: 7rem 2rem;">
+    <div style="max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1fr 0.65fr; gap: 5rem; align-items: center;">
+      <div>
+        <p class="eyebrow fade-up">NUESTRA HISTORIA</p>
+        <h2 class="fade-up stagger-1" style="font-family: 'Bebas Neue', cursive; font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1; letter-spacing: 0.03em; color: #fff; margin-bottom: 2rem;">
+          De la pasión<br>a la pista
+        </h2>
+        <div class="fade-up stagger-2" style="display: flex; flex-direction: column; gap: 1.25rem; color: rgba(255,255,255,0.6); font-size: 0.95rem; line-height: 1.8; font-weight: 300;">
+          <p>Gaucho Racing nació en las pampas argentinas, donde la velocidad no es solo una medida sino una forma de vida. Desde nuestros primeros kilómetros en las rutas abiertas de la Patagonia, supimos que nuestro destino estaba en las curvas más peligrosas y emocionantes del mundo del motorsport.</p>
+          <p>Fundado en 2019 por un grupo de pilotos y mecánicos apasionados, el equipo ha recorrido un camino de sacrificio, dedicación y un amor incondicional por las motos de competición. Cada vuelta de tuerca, cada ajuste en el taller, cada hora de entrenamiento nos acercó más a nuestro sueño más grande.</p>
+          <p>En 2025, ese sueño se convierte en realidad. Gaucho Racing se presenta por primera vez en el Isle of Man TT, la carrera de motos más antigua y más peligrosa del mundo. Más de 60 km de carreteras públicas, curvas ciegas, saltos y velocidades que superan los 300 km/h nos esperan en la pequeña isla entre Inglaterra e Irlanda.</p>
+          <p>Somos el primer equipo sudamericano en competir en esta legendaria carrera. Llevamos la bandera argentina —y de toda Latinoamérica— con orgullo, determinación y la sangre caliente del gaucho que no le teme a nada.</p>
+        </div>
+      </div>
+      <div class="fade-up stagger-2">
+        <div class="placeholder-box" style="width: 100%; height: 500px; border-radius: 2px;">
+          [ FOTO EQUIPO ]
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPO / RIDERS -->
+  <section id="equipo" style="background-color: #0d0d0d; padding: 7rem 2rem;">
+    <div style="max-width: 1280px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 4rem;">
+        <p class="eyebrow fade-up" style="justify-content: center;">
+          <span style="display: block; width: 2rem; height: 2px; background: #C8102E;"></span>
+          NUESTROS PILOTOS
+        </p>
+        <h2 class="fade-up stagger-1" style="font-family: 'Bebas Neue', cursive; font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1; letter-spacing: 0.03em; color: #fff;">
+          Los hombres detrás de la moto
+        </h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+        <!-- Rider 1 -->
+        <div class="rider-card fade-up stagger-1">
+          <div class="placeholder-box" style="width: 100%; aspect-ratio: 1/1;">
+            [ FOTO PILOTO ]
+          </div>
+          <div style="padding: 1.5rem;">
+            <h3 style="font-family: 'Bebas Neue', cursive; font-size: 1.5rem; letter-spacing: 0.05em; color: #fff; margin-bottom: 0.25rem;">PILOTO #1</h3>
+            <p style="font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: #C8102E; font-weight: 500;">Piloto Principal</p>
+            <p style="font-size: 0.85rem; color: rgba(255,255,255,0.4); margin-top: 0.75rem; line-height: 1.6; font-weight: 300;">15 años de experiencia. 3 campeonatos nacionales. El alma del equipo.</p>
+          </div>
+        </div>
+
+        <!-- Rider 2 -->
+        <div class="rider-card fade-up stagger-2">
+          <div class="placeholder-box" style="width: 100%; aspect-ratio: 1/1;">
+            [ FOTO PILOTO ]
+          </div>
+          <div style="padding: 1.5rem;">
+            <h3 style="font-family: 'Bebas Neue', cursive; font-size: 1.5rem; letter-spacing: 0.05em; color: #fff; margin-bottom: 0.25rem;">PILOTO #2</h3>
+            <p style="font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: #C8102E; font-weight: 500;">Piloto de Apertura</p>
+            <p style="font-size: 0.85rem; color: rgba(255,255,255,0.4); margin-top: 0.75rem; line-height: 1.6; font-weight: 300;">Especialista en trazadas técnicas. Debut internacional en Macau 2023.</p>
+          </div>
+        </div>
+
+        <!-- Rider 3 -->
+        <div class="rider-card fade-up stagger-3">
+          <div class="placeholder-box" style="width: 100%; aspect-ratio: 1/1;">
+            [ FOTO PILOTO ]
+          </div>
+          <div style="padding: 1.5rem;">
+            <h3 style="font-family: 'Bebas Neue', cursive; font-size: 1.5rem; letter-spacing: 0.05em; color: #fff; margin-bottom: 0.25rem;">PILOTO #3</h3>
+            <p style="font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: #C8102E; font-weight: 500;">Piloto de Reserva</p>
+            <p style="font-size: 0.85rem; color: rgba(255,255,255,0.4); margin-top: 0.75rem; line-height: 1.6; font-weight: 300;">El más joven del equipo. Talento natural con hambre de victoria.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section id="galeria" style="background-color: #0a0a0a; padding: 7rem 2rem;">
+    <div style="max-width: 1280px; margin: 0 auto;">
+      <div style="margin-bottom: 4rem;">
+        <p class="eyebrow fade-up">GALERÍA</p>
+        <h2 class="fade-up stagger-1" style="font-family: 'Bebas Neue', cursive; font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1; letter-spacing: 0.03em; color: #fff;">
+          En la pista
+        </h2>
+      </div>
+
+      <!-- Asymmetric grid inspired by Ferrari -->
+      <div style="display: grid; grid-template-columns: repeat(12, 1fr); grid-template-rows: auto; gap: 0.75rem;">
+        <!-- Large landscape 16:9 - top full width -->
+        <div class="gallery-item fade-up" style="grid-column: 1 / -1;">
+          <div class="placeholder-box" style="width: 100%; aspect-ratio: 16/9; border-radius: 2px;">[ FOTO ]</div>
+        </div>
+
+        <!-- Medium 3:4 - left -->
+        <div class="gallery-item fade-up stagger-1" style="grid-column: 1 / 5;">
+          <div class="placeholder-box" style="width: 100%; aspect-ratio: 3/4; border-radius: 2px;">[ FOTO ]</div>
+        </div>
+
+        <!-- Small 1:1 - center top -->
+        <div class="gallery-item fade-up stagger-2" style="grid-column: 5 / 9; display: flex; flex-direction: column; gap: 0.75rem;">
+          <div class="placeholder-box" style="width: 100%; aspect-ratio: 1/1; border-radius: 2px;">[ FOTO ]</div>
+          <div class="placeholder-box" style="width: 100%; aspect-ratio: 1/1; border-radius: 2px;">[ FOTO ]</div>
+        </div>
+
+        <!-- Medium 3:4 - right -->
+        <div class="gallery-item fade-up stagger-3" style="grid-column: 9 / 13;">
+          <div class="placeholder-box" style="width: 100%; aspect-ratio: 3/4; border-radius: 2px;">[ FOTO ]</div>
+        </div>
+
+        <!-- Small 1:1 - bottom right -->
+        <div class="gallery-item fade-up stagger-4" style="grid-column: 5 / 9; margin-top: -0.75rem;">
+        </div>
+        
+        <div class="gallery-item fade-up stagger-4" style="grid-column: 9 / 13; margin-top: 0;">
+          <div class="placeholder-box" style="width: 100%; aspect-ratio: 1/1; border-radius: 2px;">[ FOTO ]</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LA MOTO -->
+  <section id="moto" style="background-color: #0a0a0a; padding: 0; position: relative; overflow: hidden;">
+    <!-- Full-width motorcycle placeholder -->
+    <div style="position: relative; width: 100%; height: 500px;">
+      <div class="placeholder-box" style="width: 100%; height: 100%; font-size: 0.85rem;">
+        [ FOTO MOTO PRINCIPAL ]
+      </div>
+      <!-- Dark overlay -->
+      <div style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(10,10,10,0.9) 0%, rgba(10,10,10,0.5) 50%, rgba(10,10,10,0.8) 100%);"></div>
+      
+      <!-- Specs overlay -->
+      <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 2rem;">
+        <div style="max-width: 1280px; width: 100%;">
+          <p class="eyebrow fade-up" style="margin-bottom: 1.5rem;">LA MÁQUINA</p>
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; max-width: 900px;">
+            <div class="fade-up stagger-1" style="text-align: left;">
+              <p style="font-family: 'Bebas Neue', cursive; font-size: clamp(3rem, 5vw, 4.5rem); color: #C8102E; line-height: 1; letter-spacing: 0.03em;">1000cc</p>
+              <p style="font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 0.35rem; font-weight: 500;">Motor</p>
+            </div>
+            <div class="fade-up stagger-2" style="text-align: left;">
+              <p style="font-family: 'Bebas Neue', cursive; font-size: clamp(3rem, 5vw, 4.5rem); color: #C8102E; line-height: 1; letter-spacing: 0.03em;">200 HP</p>
+              <p style="font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 0.35rem; font-weight: 500;">Potencia</p>
+            </div>
+            <div class="fade-up stagger-3" style="text-align: left;">
+              <p style="font-family: 'Bebas Neue', cursive; font-size: clamp(3rem, 5vw, 4.5rem); color: #C8102E; line-height: 1; letter-spacing: 0.03em;">180 KG</p>
+              <p style="font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 0.35rem; font-weight: 500;">Peso</p>
+            </div>
+            <div class="fade-up stagger-4" style="text-align: left;">
+              <p style="font-family: 'Bebas Neue', cursive; font-size: clamp(3rem, 5vw, 4.5rem); color: #C8102E; line-height: 1; letter-spacing: 0.03em;">#1</p>
+              <p style="font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 0.35rem; font-weight: 500;">Número</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPONSORS -->
+  <section id="sponsors" style="background-color: #0d0d0d; padding: 6rem 2rem;">
+    <div style="max-width: 1280px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 4rem;">
+        <p class="eyebrow fade-up" style="justify-content: center;">
+          <span style="display: block; width: 2rem; height: 2px; background: #C8102E;"></span>
+          SPONSORS
+        </p>
+        <h2 class="fade-up stagger-1" style="font-family: 'Bebas Neue', cursive; font-size: clamp(2rem, 4vw, 3rem); line-height: 1; letter-spacing: 0.03em; color: #fff;">
+          Quienes hacen posible el sueño
+        </h2>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1.5rem;" class="fade-up stagger-2">
+        <div class="sponsor-item placeholder-box" style="width: 180px; height: 60px; border-radius: 2px; font-size: 0.65rem; letter-spacing: 0.15em;">SPONSOR</div>
+        <div class="sponsor-item placeholder-box stagger-1" style="width: 180px; height: 60px; border-radius: 2px; font-size: 0.65rem; letter-spacing: 0.15em;">SPONSOR</div>
+        <div class="sponsor-item placeholder-box stagger-2" style="width: 180px; height: 60px; border-radius: 2px; font-size: 0.65rem; letter-spacing: 0.15em;">SPONSOR</div>
+        <div class="sponsor-item placeholder-box stagger-3" style="width: 180px; height: 60px; border-radius: 2px; font-size: 0.65rem; letter-spacing: 0.15em;">SPONSOR</div>
+        <div class="sponsor-item placeholder-box stagger-4" style="width: 180px; height: 60px; border-radius: 2px; font-size: 0.65rem; letter-spacing: 0.15em;">SPONSOR</div>
+        <div class="sponsor-item placeholder-box stagger-5" style="width: 180px; height: 60px; border-radius: 2px; font-size: 0.65rem; letter-spacing: 0.15em;">SPONSOR</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contacto" style="background-color: #0a0a0a; padding: 4rem 2rem 2.5rem; position: relative;">
+    <!-- Red decorative line -->
+    <div style="position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(to right, transparent, #C8102E, transparent);"></div>
+    
+    <div style="max-width: 1280px; margin: 0 auto;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-bottom: 4rem; align-items: start;">
+        <!-- Logo + tagline -->
+        <div>
+          <h2 style="font-family: 'Bebas Neue', cursive; font-size: clamp(3rem, 6vw, 5rem); letter-spacing: 0.05em; color: #fff; line-height: 0.9; margin-bottom: 1rem;">
+            GAUCHO<br>RACING
+          </h2>
+          <p style="font-size: 0.8rem; color: rgba(255,255,255,0.35); font-weight: 300; letter-spacing: 0.05em; max-width: 280px; line-height: 1.6;">
+            El primer equipo sudamericano en competir en el Isle of Man TT. Velocidad. Precisión. Pasión.
+          </p>
+        </div>
+
+        <!-- Nav + Contact -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+          <div>
+            <p style="font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 1.25rem; font-weight: 600;">Navegación</p>
+            <nav style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <a href="#historia" style="font-size: 0.85rem; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; font-weight: 300;">Historia</a>
+              <a href="#equipo" style="font-size: 0.85rem; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; font-weight: 300;">Equipo</a>
+              <a href="#galeria" style="font-size: 0.85rem; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; font-weight: 300;">Galería</a>
+              <a href="#sponsors" style="font-size: 0.85rem; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; font-weight: 300;">Sponsors</a>
+            </nav>
+          </div>
+          <div>
+            <p style="font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 1.25rem; font-weight: 600;">Contacto</p>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <a href="mailto:info@gauchoracing.com" style="font-size: 0.85rem; color: rgba(255,255,255,0.55); text-decoration: none; font-weight: 300;">info@gauchoracing.com</a>
+              <a href="https://instagram.com/gauchoracing" style="font-size: 0.85rem; color: rgba(255,255,255,0.55); text-decoration: none; font-weight: 300;">@gauchoracing</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 1.75rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: gap: 1rem;">
+        <p style="font-size: 0.7rem; color: rgba(255,255,255,0.25); letter-spacing: 0.05em; font-weight: 300;">
+          © 2025 Gaucho Racing. Isle of Man TT.
+        </p>
+        <p style="font-size: 0.7rem; color: rgba(255,255,255,0.15); letter-spacing: 0.05em; font-weight: 300;">
+          Argentina · Velocidad sin límites
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Animations & Navbar Script -->
+  <script>
+    // Navbar scroll behavior
+    const navbar = document.getElementById('navbar');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar?.classList.add('scrolled');
+      } else {
+        navbar?.classList.remove('scrolled');
+      }
+    }, { passive: true });
+
+    // Nav link hover
+    const navLinks = document.querySelectorAll('#nav-links a');
+    navLinks.forEach(link => {
+      link.addEventListener('mouseenter', () => {
+        (link as HTMLElement).style.color = '#fff';
+      });
+      link.addEventListener('mouseleave', () => {
+        (link as HTMLElement).style.color = 'rgba(255,255,255,0.7)';
+      });
+    });
+
+    // CTA button hover
+    const ctaBtn = document.querySelector('a[href="#equipo"]');
+    if (ctaBtn && ctaBtn.closest('#hero')) {
+      const btn = ctaBtn as HTMLElement;
+      btn.addEventListener('mouseenter', () => {
+        btn.style.backgroundColor = '#C8102E';
+        btn.style.borderColor = '#C8102E';
+      });
+      btn.addEventListener('mouseleave', () => {
+        btn.style.backgroundColor = 'transparent';
+        btn.style.borderColor = 'rgba(255,255,255,0.7)';
+      });
+    }
+
+    // Intersection Observer for scroll animations
+    const fadeElements = document.querySelectorAll('.fade-up');
+    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px',
+      }
+    );
+
+    fadeElements.forEach(el => {
+      observer.observe(el);
+    });
+
+    // Mobile menu
+    const menuBtn = document.getElementById('menu-btn');
+    const navLinksContainer = document.getElementById('nav-links');
+
+    function handleResize() {
+      if (window.innerWidth <= 768 && menuBtn && navLinksContainer) {
+        menuBtn.style.display = 'block';
+        if (!navLinksContainer.classList.contains('mobile-open')) {
+          navLinksContainer.style.display = 'none';
+        }
+      } else if (navLinksContainer && menuBtn) {
+        menuBtn.style.display = 'none';
+        navLinksContainer.style.display = 'flex';
+        navLinksContainer.classList.remove('mobile-open');
+      }
+    }
+
+    menuBtn?.addEventListener('click', () => {
+      if (!navLinksContainer) return;
+      if (navLinksContainer.classList.contains('mobile-open')) {
+        navLinksContainer.style.display = 'none';
+        navLinksContainer.classList.remove('mobile-open');
+      } else {
+        navLinksContainer.style.display = 'flex';
+        navLinksContainer.style.flexDirection = 'column';
+        navLinksContainer.style.position = 'absolute';
+        navLinksContainer.style.top = '100%';
+        navLinksContainer.style.left = '0';
+        navLinksContainer.style.right = '0';
+        navLinksContainer.style.backgroundColor = '#0a0a0a';
+        navLinksContainer.style.padding = '1.5rem 1.25rem';
+        navLinksContainer.style.borderBottom = '1px solid rgba(255,255,255,0.08)';
+        navLinksContainer.classList.add('mobile-open');
+      }
+    });
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+  </script>
+
+  <!-- Mobile responsive CSS -->
+  <style>
+    @media (max-width: 1024px) {
+      #hero > div > div {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+      }
+      
+      #historia > div {
+        grid-template-columns: 1fr !important;
+        gap: 3rem !important;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      #equipo > div > div:last-child {
+        grid-template-columns: 1fr !important;
+      }
+      
+      #moto .fade-up:last-child > div {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+      
+      footer > div > div:first-child {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+      }
+
+      #galeria .fade-up[style*="grid-column: 1 / 5"],
+      #galeria .fade-up[style*="grid-column: 9 / 13"] {
+        grid-column: 1 / -1 !important;
+      }
+      
+      #galeria .fade-up[style*="grid-column: 5 / 9"] {
+        grid-column: 1 / -1 !important;
+      }
+    }
+  </style>
+</Layout>
