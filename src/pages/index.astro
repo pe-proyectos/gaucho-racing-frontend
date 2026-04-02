@@ -36,7 +36,7 @@ import '../styles/global.css';
     <!-- Accent line top -->
     <div style="position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent 0%, #6CACE4 40%, #FFB81C 60%, transparent 100%);"></div>
 
-    <div style="max-width: 1280px; width: 100%; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+    <div id="hero-grid" style="max-width: 1280px; width: 100%; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
       <!-- Text -->
       <div>
         <p class="hero-eyebrow" style="font-size: 0.68rem; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: #6CACE4; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.75rem;">
@@ -59,7 +59,7 @@ import '../styles/global.css';
       </div>
 
       <!-- Hero image placeholder -->
-      <div class="hero-img">
+      <div id="hero-img-wrap" class="hero-img">
         <div class="placeholder-box" style="width: 100%; aspect-ratio: 16/9; border-radius: 3px;">[ FOTO PRINCIPAL ]</div>
       </div>
     </div>
@@ -90,7 +90,7 @@ import '../styles/global.css';
         </div>
       </div>
       <div class="scale-in stagger-2">
-        <div class="placeholder-box" style="width: 100%; height: 520px; border-radius: 3px;">[ FOTO EQUIPO ]</div>
+        <div id="historia-img" class="placeholder-box" style="width: 100%; height: 520px; border-radius: 3px;">[ FOTO EQUIPO ]</div>
       </div>
     </div>
   </section>
@@ -142,7 +142,7 @@ import '../styles/global.css';
   <!-- ===== LA MOTO — BMW S 1000 RR ===== -->
   <section id="moto" style="background-color: #f5f5f5; padding: 0; position: relative; overflow: hidden;">
     <!-- Full-width placeholder -->
-    <div style="position: relative; width: 100%; height: 560px;">
+    <div id="moto-hero" style="position: relative; width: 100%; height: 560px;">
       <div class="placeholder-box" style="width: 100%; height: 100%; font-size: 0.8rem; border: none;">
         [ FOTO MOTO PRINCIPAL ]
       </div>
@@ -187,7 +187,7 @@ import '../styles/global.css';
         <h3 class="fade-up stagger-1" style="font-family: 'Bebas Neue', cursive; font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: #0a0a0a; margin-bottom: 1rem; letter-spacing: 0.03em;">Explora la BMW S 1000 RR</h3>
         <p class="fade-up stagger-2" style="font-size: 0.85rem; color: rgba(10,10,10,0.4); margin-bottom: 2.5rem; font-weight: 300; max-width: 400px; margin-left: auto; margin-right: auto; line-height: 1.7;">Próximamente — experiencia interactiva 360° de nuestra moto de competición</p>
         <!-- 360 placeholder -->
-        <div class="placeholder-box fade-up stagger-3" style="width: 100%; max-width: 900px; margin: 0 auto; height: 400px; border-radius: 4px; border: 1px dashed rgba(108,172,228,0.2); flex-direction: column; gap: 1rem;">
+        <div id="moto-360" class="placeholder-box fade-up stagger-3" style="width: 100%; max-width: 900px; margin: 0 auto; height: 400px; border-radius: 4px; border: 1px dashed rgba(108,172,228,0.2); flex-direction: column; gap: 1rem;">
           <svg width="48" height="48" viewBox="0 0 48 48" fill="none" style="opacity: 0.2;">
             <circle cx="24" cy="24" r="20" stroke="#6CACE4" stroke-width="1.5"/>
             <path d="M10 24 Q24 10 38 24 Q24 38 10 24" stroke="#6CACE4" stroke-width="1.5" fill="none"/>
@@ -209,7 +209,7 @@ import '../styles/global.css';
         </h2>
       </div>
       <!-- Asymmetric grid -->
-      <div style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 0.6rem;">
+      <div id="gallery-grid" style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 0.6rem;">
         <div class="gallery-item fade-up" style="grid-column: 1 / -1;">
           <div class="placeholder-box" style="width: 100%; aspect-ratio: 16/9; border-radius: 2px;">[ FOTO ]</div>
         </div>
@@ -239,7 +239,7 @@ import '../styles/global.css';
           Quienes hacen posible el sueño
         </h2>
       </div>
-      <div class="fade-up stagger-1" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1.25rem;">
+      <div id="sponsors-row" class="fade-up stagger-1" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1.25rem;">
         <!-- BMW destacado -->
         <div class="sponsor-item placeholder-box" style="width: 220px; height: 70px; border-radius: 3px; font-size: 0.7rem; letter-spacing: 0.18em; border: 1px solid rgba(108,172,228,0.3); opacity: 0.9;">BMW MOTORRAD</div>
         <div class="sponsor-item placeholder-box" style="width: 180px; height: 60px; border-radius: 3px; font-size: 0.65rem; letter-spacing: 0.15em;">SPONSOR</div>
@@ -257,7 +257,7 @@ import '../styles/global.css';
     <div style="position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, #6CACE4 30%, #FFB81C 70%, transparent);"></div>
 
     <div style="max-width: 1280px; margin: 0 auto;">
-      <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 5rem; margin-bottom: 4.5rem; align-items: start;">
+      <div id="footer-grid" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 5rem; margin-bottom: 4.5rem; align-items: start;">
         <!-- Brand -->
         <div>
           <h2 style="font-family: 'Bebas Neue', cursive; font-size: clamp(3rem, 6vw, 5.5rem); letter-spacing: 0.05em; line-height: 0.9; margin-bottom: 1.25rem;">
@@ -455,18 +455,121 @@ import '../styles/global.css';
       background: rgba(108,172,228,0.08);
     }
 
-    /* Responsive */
+    /* ===========================
+       RESPONSIVE — TABLET
+       =========================== */
     @media (max-width: 1024px) {
-      #hero > div > div:last-child,
+      /* Hero: stack vertical */
+      #hero-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        text-align: center;
+      }
+      #hero-grid .hero-eyebrow {
+        justify-content: center;
+      }
+      #hero-grid .hero-cta {
+        justify-content: center;
+      }
+      /* Historia: stack */
       #historia > div {
         grid-template-columns: 1fr !important;
         gap: 2.5rem !important;
       }
+      /* Specs: 2 cols */
+      #specs-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 2.5rem !important;
+      }
+      /* Footer: stack */
+      #footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 3rem !important;
+      }
     }
+
+    /* ===========================
+       RESPONSIVE — MOBILE
+       =========================== */
     @media (max-width: 768px) {
-      #riders-grid      { grid-template-columns: 1fr !important; }
-      #specs-grid       { grid-template-columns: repeat(2,1fr) !important; gap: 2rem !important; }
-      footer > div > div:first-child { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+      /* Hero image full width, prominent */
+      #hero-img-wrap {
+        order: -1;
+        width: 100%;
+      }
+      #hero-img-wrap .placeholder-box {
+        aspect-ratio: 4/3 !important;
+        min-height: 240px;
+        width: 100% !important;
+      }
+      /* Hero text center */
+      #hero-grid {
+        padding-top: 5rem;
+      }
+
+      /* Riders: single col */
+      #riders-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      /* Specs: 2 cols */
+      #specs-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+      }
+
+      /* Gallery: full-width cols */
+      #gallery-grid > * {
+        grid-column: 1 / -1 !important;
+      }
+
+      /* Sponsors: wrap 2 cols */
+      #sponsors-row {
+        gap: 0.75rem !important;
+      }
+      #sponsors-row .sponsor-item {
+        width: 140px !important;
+        height: 50px !important;
+      }
+
+      /* Footer */
+      #footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+      }
+      #footer-nav-grid {
+        grid-template-columns: 1fr 1fr !important;
+      }
+
+      /* Moto section height */
+      #moto-hero {
+        height: 380px !important;
+      }
+
+      /* 360 placeholder height */
+      #moto-360 {
+        height: 240px !important;
+      }
+
+      /* Historia image height */
+      #historia-img {
+        height: 280px !important;
+      }
+
+      /* Section padding */
+      section {
+        padding: 3.5rem 1.25rem !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #specs-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
+      }
+      #moto-hero {
+        height: 300px !important;
+      }
     }
   </style>
 </Layout>
