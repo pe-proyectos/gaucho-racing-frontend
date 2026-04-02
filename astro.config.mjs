@@ -6,7 +6,7 @@ export default defineConfig({
   site: 'https://gaucho.luminari.agency',
   vite: {
     plugins: [tailwindcss()],
-    cacheDir: '/tmp/vite-cache',
+    cacheDir: false,
     preview: {
       allowedHosts: ['gaucho.luminari.agency', 'localhost'],
     },
