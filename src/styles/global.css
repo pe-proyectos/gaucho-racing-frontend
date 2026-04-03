@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap');
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   --font-display: 'Bebas Neue', cursive;
   --font-body: 'Inter', sans-serif;
-  --color-primary: #6CACE4;
-  --color-accent: #FFB81C;
+  --color-primary: #6cace4;
+  --color-accent: #ffb81c;
   --color-bg: #0a0a0a;
   --color-card: #111111;
   --color-placeholder: #1a1a1a;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -36,34 +38,59 @@ body {
 
 /* Clip-path reveal — heading cinematic */
 @keyframes clipReveal {
-  from { clip-path: inset(0 100% 0 0); opacity: 0; }
-  to   { clip-path: inset(0 0% 0 0);   opacity: 1; }
+  from {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+  }
+  to {
+    clip-path: inset(0 0% 0 0);
+    opacity: 1;
+  }
 }
 
 /* Slide-up fade */
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to   { opacity: 1; transform: translateY(0);    }
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Line grow horizontal */
 @keyframes lineGrow {
-  from { transform: scaleX(0); transform-origin: left; }
-  to   { transform: scaleX(1); transform-origin: left; }
+  from {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  to {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
 }
 
 /* Scale fade in */
 @keyframes scaleFade {
-  from { opacity: 0; transform: scale(0.94); }
-  to   { opacity: 1; transform: scale(1);    }
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* Scroll-triggered fade-up (IntersectionObserver adds .visible) */
 .fade-up {
   opacity: 0;
   transform: translateY(35px);
-  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
-              transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+  transition:
+    opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .fade-up.visible {
   opacity: 1;
@@ -74,8 +101,9 @@ body {
 .clip-reveal {
   clip-path: inset(0 100% 0 0);
   opacity: 0;
-  transition: clip-path 0.9s cubic-bezier(0.22, 1, 0.36, 1),
-              opacity 0.4s ease;
+  transition:
+    clip-path 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.4s ease;
 }
 .clip-reveal.visible {
   clip-path: inset(0 0% 0 0);
@@ -86,8 +114,9 @@ body {
 .scale-in {
   opacity: 0;
   transform: scale(0.93);
-  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
-              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .scale-in.visible {
   opacity: 1;
@@ -112,12 +141,24 @@ body {
 }
 
 /* Stagger delays */
-.stagger-1 { transition-delay: 0.1s; }
-.stagger-2 { transition-delay: 0.2s; }
-.stagger-3 { transition-delay: 0.3s; }
-.stagger-4 { transition-delay: 0.4s; }
-.stagger-5 { transition-delay: 0.5s; }
-.stagger-6 { transition-delay: 0.6s; }
+.stagger-1 {
+  transition-delay: 0.1s;
+}
+.stagger-2 {
+  transition-delay: 0.2s;
+}
+.stagger-3 {
+  transition-delay: 0.3s;
+}
+.stagger-4 {
+  transition-delay: 0.4s;
+}
+.stagger-5 {
+  transition-delay: 0.5s;
+}
+.stagger-6 {
+  transition-delay: 0.6s;
+}
 
 /* ===========================
    NAVBAR
@@ -131,11 +172,14 @@ body {
   padding: 1.5rem 2rem;
   background-color: transparent;
   border-bottom: 1px solid transparent;
-  transition: background-color 0.4s ease, border-color 0.4s ease, padding 0.4s ease;
+  transition:
+    background-color 0.4s ease,
+    border-color 0.4s ease,
+    padding 0.4s ease;
 }
 #navbar.scrolled {
-  background-color: rgba(245,245,245,0.97);
-  border-bottom-color: rgba(108,172,228,0.18);
+  background-color: rgba(245, 245, 245, 0.97);
+  border-bottom-color: rgba(108, 172, 228, 0.18);
   padding: 1rem 2rem;
   backdrop-filter: blur(10px);
 }
@@ -151,7 +195,7 @@ body {
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #6CACE4;
+  color: #6cace4;
   margin-bottom: 1rem;
 }
 .eyebrow::before {
@@ -159,7 +203,7 @@ body {
   display: block;
   width: 3rem;
   height: 2px;
-  background: linear-gradient(90deg, #6CACE4, #FFB81C);
+  background: linear-gradient(90deg, #6cace4, #ffb81c);
   flex-shrink: 0;
 }
 
@@ -168,7 +212,7 @@ body {
    =========================== */
 .placeholder-box {
   background-color: #e8e8e8;
-  border: 1px solid rgba(108,172,228,0.15);
+  border: 1px solid rgba(108, 172, 228, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -183,18 +227,31 @@ body {
    SCROLL INDICATOR
    =========================== */
 @keyframes scrollPulse {
-  0%, 100% { opacity: 1;   transform: translateY(0);  }
-  50%       { opacity: 0.3; transform: translateY(8px); }
+  0%,
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.3;
+    transform: translateY(8px);
+  }
 }
-.scroll-indicator { animation: scrollPulse 2s ease-in-out infinite; }
+.scroll-indicator {
+  animation: scrollPulse 2s ease-in-out infinite;
+}
 
 /* ===========================
    GALLERY
    =========================== */
-.gallery-item { overflow: hidden; cursor: pointer; }
+.gallery-item {
+  overflow: hidden;
+  cursor: pointer;
+}
 .gallery-item .placeholder-box {
-  transition: transform 0.6s cubic-bezier(0.22,1,0.36,1),
-              filter 0.4s ease;
+  transition:
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.4s ease;
 }
 .gallery-item:hover .placeholder-box {
   filter: brightness(1.5);
@@ -208,52 +265,72 @@ body {
   background-color: #efefef;
   overflow: hidden;
   position: relative;
-  transition: transform 0.35s cubic-bezier(0.22,1,0.36,1),
-              box-shadow 0.35s ease;
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
 }
 .rider-card::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #6CACE4, #FFB81C);
+  background: linear-gradient(90deg, #6cace4, #ffb81c);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.4s cubic-bezier(0.22,1,0.36,1);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .rider-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(108,172,228,0.08);
+  box-shadow: 0 20px 40px rgba(108, 172, 228, 0.08);
 }
-.rider-card:hover::before { transform: scaleX(1); }
+.rider-card:hover::before {
+  transform: scaleX(1);
+}
 
 /* ===========================
    SPONSOR LOGOS
    =========================== */
 .sponsor-item {
   opacity: 0.45;
-  transition: opacity 0.35s ease, transform 0.35s ease;
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
 }
-.sponsor-item:hover { opacity: 1; transform: scale(1.05); }
+.sponsor-item:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
 
 /* ===========================
    STAT NUMBERS (counter anim)
    =========================== */
 .stat-number {
   font-family: 'Bebas Neue', cursive;
-  color: #6CACE4;
+  color: #6cace4;
   line-height: 1;
   letter-spacing: 0.03em;
 }
-.stat-number.accent { color: #FFB81C; }
+.stat-number.accent {
+  color: #ffb81c;
+}
 
 /* ===========================
    SECTION BASE
    =========================== */
-section { padding: 6rem 2rem; }
+section {
+  padding: 6rem 2rem;
+}
 
 @media (max-width: 768px) {
-  section { padding: 4rem 1.25rem; }
-  #navbar { padding: 1.25rem; }
-  #navbar.scrolled { padding: 0.875rem 1.25rem; }
+  section {
+    padding: 4rem 1.25rem;
+  }
+  #navbar {
+    padding: 1.25rem;
+  }
+  #navbar.scrolled {
+    padding: 0.875rem 1.25rem;
+  }
 }
