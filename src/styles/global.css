@@ -293,13 +293,12 @@ body {
    SPONSOR LOGOS
    =========================== */
 .sponsor-item {
-  opacity: 0.45;
+  opacity: 1;
   transition:
     opacity 0.35s ease,
     transform 0.35s ease;
 }
 .sponsor-item:hover {
-  opacity: 1;
   transform: scale(1.05);
 }
 

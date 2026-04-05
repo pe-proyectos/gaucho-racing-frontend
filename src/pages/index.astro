@@ -500,20 +500,11 @@ import '../styles/global.css';
         </h2>
       </div>
 
-      <!-- Tabs -->
-      <div
-        style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 3rem;"
-        class="fade-up"
-      >
-        <button id="btn-primarios" class="btn-tab active">Sponsors Primarios</button>
-        <button id="btn-secundarios" class="btn-tab">Sponsors Secundarios</button>
-      </div>
-
       <!-- Primarios -->
       <div
         id="content-primarios"
         class="fade-up stagger-1"
-        style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 3rem;"
+        style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 4rem; margin-bottom: 5rem;"
       >
         <!-- BMW -->
         <div class="sponsor-item">
@@ -521,27 +512,33 @@ import '../styles/global.css';
             href="https://www.bmw.com.ar/es/index.html"
             target="_blank"
             rel="noopener noreferrer"
-            style="display: flex; flex-direction: column; align-items: center; gap: 0.8rem; text-decoration: none;"
+            style="display: flex; flex-direction: column; align-items: center; gap: 1rem; text-decoration: none;"
           >
             <img
               src="/images/bmw_sponsor_primario.webp"
               alt="BMW ARGENTINA"
-              style="height: 65px; width: auto; object-fit: contain; transition: transform 0.3s ease;"
+              style="height: 85px; width: auto; object-fit: contain; transition: transform 0.3s ease;"
               class="hover-scale"
             />
             <span
-              style="font-size: 0.6rem; letter-spacing: 0.15em; color: rgba(10,10,10,0.4); text-transform: uppercase; font-weight: 700;"
+              style="font-size: 0.75rem; letter-spacing: 0.15em; color: rgba(10,10,10,0.8); text-transform: uppercase; font-weight: 700;"
               >BMW ARGENTINA</span
             >
           </a>
         </div>
       </div>
 
+      <!-- Divider (Optional, subtle line) -->
+      <div 
+        class="fade-up"
+        style="width: 100px; height: 1px; background: rgba(108,172,228,0.2); margin: 0 auto 4rem;"
+      ></div>
+
       <!-- Secundarios -->
       <div
         id="content-secundarios"
-        class="fade-up stagger-1"
-        style="display: none; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2.5rem;"
+        class="fade-up stagger-2"
+        style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 3.5rem;"
       >
         <!-- LUMINARI -->
         <div class="sponsor-item">
@@ -554,11 +551,11 @@ import '../styles/global.css';
             <img
               src="/images/luminari_sponsor_secundario.png"
               alt="Luminari Agency"
-              style="height: 50px; width: auto; object-fit: contain; transition: transform 0.3s ease;"
+              style="height: 45px; width: auto; object-fit: contain; transition: transform 0.3s ease;"
               class="hover-scale"
             />
             <span
-              style="font-size: 0.55rem; letter-spacing: 0.15em; color: rgba(10,10,10,0.4); text-transform: uppercase; font-weight: 700;"
+              style="font-size: 0.6rem; letter-spacing: 0.15em; color: rgba(10,10,10,0.7); text-transform: uppercase; font-weight: 700;"
               >LUMINARI AGENCY</span
             >
           </a>
@@ -729,26 +726,7 @@ import '../styles/global.css';
         });
       }
     });
-    // Sponsors Toggle
-    const btnPrim = document.getElementById('btn-primarios');
-    const btnSec = document.getElementById('btn-secundarios');
-    const contPrim = document.getElementById('content-primarios');
-    const contSec = document.getElementById('content-secundarios');
 
-    if (btnPrim && btnSec && contPrim && contSec) {
-      btnPrim.addEventListener('click', () => {
-        btnPrim.classList.add('active');
-        btnSec.classList.remove('active');
-        contPrim.style.display = 'flex';
-        contSec.style.display = 'none';
-      });
-      btnSec.addEventListener('click', () => {
-        btnSec.classList.add('active');
-        btnPrim.classList.remove('active');
-        contPrim.style.display = 'none';
-        contSec.style.display = 'flex';
-      });
-    }
 
     window.addEventListener('resize', handleResize);
     handleResize();
@@ -819,28 +797,7 @@ import '../styles/global.css';
     }
 
     /* Tabs Sponsors */
-    .btn-tab {
-      background: transparent;
-      border: 1px solid rgba(10, 10, 10, 0.1);
-      color: rgba(10, 10, 10, 0.5);
-      padding: 0.6rem 1.5rem;
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      border-radius: 2px;
-    }
-    .btn-tab:hover {
-      color: #0a0a0a;
-      border-color: rgba(10, 10, 10, 0.3);
-    }
-    .btn-tab.active {
-      background: #6cace4;
-      border-color: #6cace4;
-      color: #0a0a0a;
-    }
+
 
     .gallery-item:hover .placeholder-box {
       transform: scale(1.02);
